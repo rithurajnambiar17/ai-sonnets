@@ -42,6 +42,7 @@ def build_generator():
     model.add(BatchNormalization(momentum=0.8))
     model.add(Dense(max_sequence_length * vocabulary_size, activation='softmax'))
     model.add(Reshape((max_sequence_length, vocabulary_size)))
+    model.compile(loss='categorical_crossentropy', optimizer=Adam(0.0002, 0.5))
     return model
 
 # Define the discriminator model
@@ -53,6 +54,7 @@ def build_discriminator():
     model.add(Dense((max_sequence_length * vocabulary_size) // 4))
     model.add(LeakyReLU(alpha=0.2))
     model.add(Dense(1, activation='sigmoid'))
+    model.compile(loss='binary_crossentropy', optimizer=Adam(0.0002, 0.5))
     return model
 
 # Define the combined generator/discriminator model
