@@ -47,11 +47,36 @@
 
             </div>
         </header><!-- End Header -->
+
+        <main id="main" data-aos="fade" data-aos-delay="1500">
+
+            <!-- ======= End Page Header ======= -->
+            <div class="page-header d-flex align-items-center">
+                <div class="container">
+                    <center>
+                        <h1>Generating AI Sonnets</h1><br>
+                    </center>
+                    <div class="row">
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-4">
+                            <!-- Converting the output in string to sentences using punctuation-->
+                            {%for i in output%}
+                                <p>{{i}}<p>
+                            {%endfor%}
+                        </div>
+                        <div class="col-md-4">
+
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End Page Header -->
+        </main>
+
         <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
         <script src="{{ url_for('static', filename = 'vendor/glightbox/js/glightbox.min.js') }}"></script>
-        <!-- <script src="assets/vendor/glightbox/js/glightbox.min.js"></script> -->
-
         <script src="{{ url_for('static', filename = 'vendor/bootstrap/js/bootstrap.min.js') }}"></script>
     </body>
 </html>

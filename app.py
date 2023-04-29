@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from programs.generate_text import generated_text
 
 app = Flask(__name__)
 
@@ -12,7 +13,8 @@ def about():
 
 @app.route('/generate/')
 def generate():
-    return render_template('generate.html')
+    output = generated_text()
+    return render_template('generate.html', output=output)
 
 if __name__ == '__main__':
     app.run(debug=True)
