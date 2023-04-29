@@ -1,0 +1,246 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      
+        <title>AI Sonnets</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+      
+        <!-- Vendor CSS Files -->
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'vendor/bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'vendor/bootstrap-icons/bootstrap-icons.css') }}">
+        <link href="{{ url_for('static', filename = 'vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+
+        <!-- Local CSS Files -->
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'styles/main.css') }}">
+
+    </head>
+
+    <body>
+  <!-- ======= Header ======= -->
+        <header id="header" class="header d-flex align-items-center fixed-top">
+            <div class=" container container-fluid d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <i class="bi bi-book"></i>
+                <h1>AI Sonnets</h1>
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/generate">Generate</a></li>
+                </ul>
+            </nav><!-- .navbar -->
+
+            <div class="header-social-links">
+                <a href="https://twitter.com/kaychallayy" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="https://instagram.com/kaychallay" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://linkedin.com/in/rithuraj-nambiar" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            </div>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+            </div>
+        </header><!-- End Header -->
+
+          <!-- ======= Hero Section ======= -->
+        <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade" data-aos-delay="1500">
+            <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center">
+                <h2> Presenting <span>AI Sonnets</span> generated using a ML model trained on a dataset of real sonnets</h2>
+                <!-- <p>Blanditiis praesentium aliquam illum tempore incidunt debitis dolorem magni est deserunt sed qui libero. Qui voluptas amet.</p> -->
+                <a href="/generate" class="btn-get-started">Generate</a>
+                </div>
+            </div>
+            </div>
+        </section><!-- End Hero Section -->
+
+        <main id="main" data-aos="fade" data-aos-delay="1500">
+
+            <!-- ======= Gallery Section ======= -->
+            <section id="gallery" class="gallery">
+              <div class="container-fluid">
+        
+                <div class="row gy-4 justify-content-center">
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-1.jpg') }}" class="img-fluid" alt="">
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-1.jpg') }}" title="Gallery 1" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-2.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-2.jpg') }}" title="Gallery 2" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-3.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-3.jpg') }}" title="Gallery 3" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-hsingle.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-4.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-4.jpg') }}" title="Gallery 4" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-5.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-5.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-5.jpg') }}" title="Gallery 5" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <!-- <img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt=""> -->
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-6.jpg') }}" class="img-fluid" alt="">
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-6.jpg') }}" title="Gallery 6" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-7.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-7.jpg') }}" title="Gallery 7" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-8.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-8.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-8.jpg') }}" title="Gallery 8" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-9.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-9.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-9.jpg') }}" title="Gallery 9" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-10.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-10.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-10.jpg') }}" title="Gallery 10" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-11.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-11.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-11.jpg') }}" title="Gallery 11" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <!-- <img src="assets/img/gallery/gallery-12.jpg" class="img-fluid" alt=""> -->
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-12.jpg') }}" class="img-fluid" alt="">
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-12.jpg') }}" title="Gallery 12" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-13.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-13.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-13.jpg') }}" title="Gallery 13" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-14.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-14.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-14.jpg') }}" title="Gallery 14" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-15.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-15.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-15.jpg') }}" title="Gallery 15" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="gallery-item h-100">
+                      <img src="{{ url_for('static', filename = 'img/gallery/gallery-16.jpg') }}" class="img-fluid" alt="">
+                      <!-- <img src="assets/img/gallery/gallery-16.jpg" class="img-fluid" alt=""> -->
+                      <div class="gallery-links d-flex align-items-center justify-content-center">
+                        <a href="{{ url_for('static', filename = 'img/gallery/gallery-16.jpg') }}" title="Gallery 16" class="glightbox preview-link"><i class="bi bi-arrows-angle-expand"></i></a>
+                        <!-- <a href="gallery-single.html" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                      </div>
+                    </div>
+                  </div><!-- End Gallery Item -->
+        
+                </div>
+        
+              </div>
+            </section><!-- End Gallery Section -->
+        
+          </main><!-- End #main -->
+        
+        
+          <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <script src="{{ url_for('static', filename = 'vendor/glightbox/js/glightbox.min.js') }}"></script>
+        <!-- <script src="assets/vendor/glightbox/js/glightbox.min.js"></script> -->
+
+        <script src="{{ url_for('static', filename = 'vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    </body>
+</html>
