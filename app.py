@@ -17,4 +17,4 @@ def generate():
     return render_template('generate.html', output=output)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) 
