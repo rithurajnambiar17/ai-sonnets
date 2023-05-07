@@ -1238,6 +1238,27 @@ h6 {
   }
 }
 
+.btn-bg {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  padding: 12px 40px;
+  border: 1px solid white;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  color: #fff;
+  background: inherit;
+}
+
+.btn-bg:hover {
+  background: #2cbc85;
+  color: white;
+}
+
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

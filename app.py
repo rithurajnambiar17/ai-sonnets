@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
-from programs.generate_text import generated_text
+# from programs.generate_text import generated_text
+from programs.generate_sonnet import generate_sonnet
 
 app = Flask(__name__)
 
@@ -13,7 +14,12 @@ def about():
 
 @app.route('/generate/')
 def generate():
-    output = generated_text()
+    # output = generated_text()
+    if request.method == 'POST':
+        seedText = request.form['seedText']
+        output = generate_sonnet(seedText)
+    else:
+        output = ''
     return render_template('generate.html', output=output)
 
 if __name__ == '__main__':
