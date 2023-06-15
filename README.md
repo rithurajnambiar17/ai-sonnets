@@ -30,7 +30,7 @@ To run the AI Sonnets project locally, follow these steps:
 
 1. Clone the repository:
 
-git clone https://github.com/rithurajnambiar17/ai-sonnets.git
+`git clone https://github.com/rithurajnambiar17/ai-sonnets.git`
 
 
 2. Install the required dependencies:
