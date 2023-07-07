@@ -1,9 +1,11 @@
 import sys
 import random
+import pickle
 import numpy as np
-import tensorflow as tf
+# import tensorflow as tf
 
-model = tf.keras.models.load_model('models/sonnet_generator.h5')
+# model = tf.keras.models.load_model('models/sonnet_generator.h5')
+model = pickle.load(open('models/sonnet_generator.h5', 'rb'))
 seq_length = 40
 
 # Load the sonnet text file and convert to lowercase
