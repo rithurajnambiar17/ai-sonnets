@@ -22,6 +22,7 @@ def generate():
     #     output = generateSonnet(seedText)
     # else:
     #     output = ''
+    output = ''
     return render_template('generate.html', output=output)
 
 # if __name__ == '__main__':
