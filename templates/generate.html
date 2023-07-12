@@ -62,11 +62,12 @@
                         </div>
                         <div class="col-md-4">
 
-                            <form action="{{ url_for('generate') }}" method="POST" enctype="multipart/form-data">
+                            <!-- <form action="{{ url_for('generate') }}" method="POST" enctype="multipart/form-data"> -->
+                            <form method="POST" enctype="multipart/form-data">
                                 <input class="form-control" type="text" name="seedText"/><br>
                                 <center>
                                     <a class="btn-get-started" type="submit" >
-                                        <button type="submit" class="btn btn-bg">Generate</button>
+                                        <button type="submit" onclick="alert('Oops! The model is still training! \nTry again later!');" id="generate-btn" class="btn btn-bg">Generate</button>
                                     </a><br><br>
                                 </center>
                             </form>
