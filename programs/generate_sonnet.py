@@ -2,8 +2,8 @@ import numpy as np
 import tensorflow as tf
 from programs.depickle_tokenizer import depickle_tokenizer
 
-tokenizerLoaded = depickle_tokenizer('server\tokenizer.pickle')
-model = tf.keras.models.load_model('server\models\sonnet_generator.h5')
+tokenizerLoaded = depickle_tokenizer('tokenizer.pickle')
+model = tf.keras.models.load_model('models\sonnet_generator.h5')
 
 def generate_sonnet(seed_text):
   MAX_SEQ_LEN = 163
