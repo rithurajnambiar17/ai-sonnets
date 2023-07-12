@@ -9,18 +9,19 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/about/')
+@app.route('/about')
 def about():
     return render_template('about.html')
 
-@app.route('/generate/')
+@app.route('/generate/', methods=['GET', 'POST'])
 def generate():
     # output = generated_text()
-    if request.method == 'POST':
-        seedText = request.form['seedText']
-        output = generate_sonnet(seedText)
-    else:
-        output = ''
+    # if request.method == 'POST':
+    #     seedText = request.form['seedText']
+    #     generateSonnet = generate_sonnet.generate_sonnet
+    #     output = generateSonnet(seedText)
+    # else:
+    #     output = ''
     return render_template('generate.html', output=output)
 
 # if __name__ == '__main__':

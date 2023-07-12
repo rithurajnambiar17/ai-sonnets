@@ -5,11 +5,11 @@ import numpy as np
 # import tensorflow as tf
 
 # model = tf.keras.models.load_model('models/sonnet_generator.h5')
-model = pickle.load(open('models/sonnet_generator.h5', 'rb'))
+model = pickle.load(open('./models/sonnet_generator.h5', 'rb'))
 seq_length = 40
 
 # Load the sonnet text file and convert to lowercase
-sonnet_text = open("./data/Sonnet.txt", "r").read().lower()
+sonnet_text = open("./data/sonnet_data/Sonnet.txt", "r").read().lower()
 
 # Create a set of unique characters present in the text
 chars = sorted(list(set(sonnet_text)))

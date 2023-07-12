@@ -3,13 +3,13 @@ import tensorflow as tf
 from programs.depickle_tokenizer import depickle_tokenizer
 
 tokenizerLoaded = depickle_tokenizer('tokenizer.pickle')
-model = tf.keras.models.load_model('models\sonnet_generator.h5')
+model = tf.keras.models.load_model('./models/sonnet_generator.h5')
 
 def generate_sonnet(seed_text):
   MAX_SEQ_LEN = 163
   for i in range(14):
     token_list = tokenizerLoaded.texts_to_sequences([seed_text])[0]
-    token_list = tf.keras.preprocessing.text.pad_sequences([token_list], maxlen = MAX_SEQ_LEN-1, padding='pre')
+    token_list = tf.keras.utils.pad_sequences([token_list], maxlen = MAX_SEQ_LEN-1, padding='pre')
     predicted = np.argmax(model.predict(token_list), axis=-1)
     output_word = ""
 
